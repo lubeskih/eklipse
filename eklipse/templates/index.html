@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a data-toggle="modal" data-target="#projectInfoModal">project info</a>
+            </li>
+            <li>
+                <a href="https://who.lh.mk">who.lh.mk</a>
+            </li>
+        </ul>
+        <div class="modal fade" id="projectInfoModal" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">info</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Eklipse is a search engine for solar eclipses happening in the 21th century.
+                            <p>
+                                <p>Searching is pretty straightforward, entering an area in the search box and hitting enter
+                                    should query the database. The area can be a continent, ocean or a country.</p>
+
+                                <p>Eklipse is a free software. The LICENSE, README and source code can be found at
+                                    <code>https://git.lh.mk/eklipse</code>.</p>
+                                <p>The repository is also being mirrored at
+                                    <code>https://github.com/hristijansk/eklipse</code>.
+                                    <hr>
+                                    <p>Data:</p>
+                                    <p></p>
+                                    <p>
+                                        <code>Area</code> - geographical area.</p>
+                                    <p>
+                                        <code>Date</code> - date of a solar eclipse.</p>
+                                    <p>
+                                        <code>Time</code> - time of greatest eclipse (UTC).</p>
+                                    <p>
+                                        <code>Duration</code> - possible duration of a solar eclipse.</p>
+                                    <p>
+                                        <code>Magnitude</code> - the fraction of the angular diameter of a celestial body being eclipsed.</p>
+                                    <p>
+                                        <code>Saros</code> - a period of approximately 223 synodic months, that can be used to predict eclipses
+                                        of the Sun and Moon.</p>
+                                    <p>
+                                        <code>Path width</code> - the path width of the total or annular eclipse.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div id="imaginary_container">
+                    <div class="input-group stylish-input-group">
+                        <input type="text" id="search" class="form-control" placeholder="Eg. Europe, Africa, Afghanistan, United States">
+                        <span class="input-group-addon">
+                            <button type="submit" id="submit" onclick="button();">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container">
+        <table id="table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Magnitude</th>
+                    <th>Location</th>
+                    <th>Saros</th>
+                    <th>Path Width (KM)</th>
+                    <th>Path Width (MI)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container" id="errors">
+    </div>
+</body>
+
+</html>
