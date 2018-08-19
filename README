@@ -1,0 +1,45 @@
+eklipse - search engine for solar eclipses in the 21th century
+==============================================================
+eklipse is search engine that lets you search through a database of solar eclipses happening in the 21th century.
+The repo also has the database file which has around 1300 records. The data was scraped from wikipedia.
+
+The first "Initial commit" of this project happened on:
+
+    2017-08-21 20:19
+
+Requirements
+------------
+    - python3
+    - sqlite3
+    - python-pip
+
+The requirements.txt file holds the libraries used in this project. To install them
+run:
+    
+    pip install -r requirements.txt
+
+
+Running 
+-------
+Running the server:
+    
+    flask run
+
+This should start running (usually) on:
+
+    localhost:5000
+
+On the root route, you will see the front-end which gives you a search box where you can enter a geo location. After entering it, you can query the database by
+hitting <enter>. A script takes the input and passes it to /query/<input>, if a result has been found, the route should return JSON with the data and will be
+served on the front-end.
+
+Contact
+-------
+If you want to send a patch or you have a question, please use the tag:
+
+    [eklipse]
+
+in the subject and send an email at:
+
+    _@mail.lh.mk
+
